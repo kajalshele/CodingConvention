@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class SalaryCalculator {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        List<Employee> empList=new LinkedList<>();
-        for(int i=0;i<3;i++){
+        List<Employee> employeeList=new LinkedList<>();
+        for(int index=0;index<3;index++){
             int id=sc.nextInt();
             double salary=sc.nextDouble();
-            empList.add(new Employee(id));
+            employeeList.add(new Employee(id,salary));
         }
-        empList.stream()
-                .forEach(obj-> System.out.println(obj.calTax()));
+        employeeList.stream()
+                .forEach(object-> System.out.println(object.calculateTax()));
     }
 
 }
